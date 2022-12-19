@@ -21,29 +21,31 @@ internal partial class Program
         return number;
     }
 
-    static void PrintNumber(int number){
-        switch (number){
+    static void PrintNumber(int number)
+    {
+        switch (number)
+        {
             case 0:
-            System.Console.WriteLine("Ноль");
-            break;
+                System.Console.WriteLine("Ноль");
+                break;
             case 1:
-            System.Console.WriteLine("Один");
-            break;
+                System.Console.WriteLine("Один");
+                break;
             case 2:
-            System.Console.WriteLine("Два");
-            break;
+                System.Console.WriteLine("Два");
+                break;
             case 3:
-            System.Console.WriteLine("Три");
-            break;
+                System.Console.WriteLine("Три");
+                break;
             case 4:
-            System.Console.WriteLine("Четыре");
-            break;
+                System.Console.WriteLine("Четыре");
+                break;
             case 5:
-            System.Console.WriteLine("Пять");
-            break;
+                System.Console.WriteLine("Пять");
+                break;
             default:
-            System.Console.WriteLine("Ошибка");
-            break;
+                System.Console.WriteLine("Ошибка");
+                break;
         }
     }
 }
