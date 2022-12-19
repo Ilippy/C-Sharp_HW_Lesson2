@@ -15,36 +15,37 @@ internal partial class Program
     {
         System.Console.WriteLine(str);
         char[] arrayChar = { 'ф', 'м', 'и', 'г', 'б' };
-        char ch = Console.ReadLine()![0];
+        char ch = Char.ToLower(Console.ReadLine()![0]);
         while (!arrayChar.Contains(ch))
         {
             System.Console.WriteLine($"Ошибка! {str}");
-            ch = Console.ReadLine()![0];
+            ch = Char.ToLower(Console.ReadLine()![0]);
         }
         return ch;
     }
 
     static void PrintSubject(char ch)
     {
-        switch (ch){
+        switch (ch)
+        {
             case 'ф':
-            System.Console.WriteLine($"{ch} - Физика");
-            break;
+                System.Console.WriteLine($"{ch} - Физика");
+                break;
             case 'м':
-            System.Console.WriteLine($"{ch} - Математика");
-            break;
+                System.Console.WriteLine($"{ch} - Математика");
+                break;
             case 'и':
-            System.Console.WriteLine($"{ch} - История");
-            break;
+                System.Console.WriteLine($"{ch} - История");
+                break;
             case 'г':
-            System.Console.WriteLine($"{ch} - География");
-            break;
+                System.Console.WriteLine($"{ch} - География");
+                break;
             case 'б':
-            System.Console.WriteLine($"{ch} - Биология");
-            break;
+                System.Console.WriteLine($"{ch} - Биология");
+                break;
             default:
-            System.Console.WriteLine($"Error! Char - {ch}");
-            break;
+                System.Console.WriteLine($"Error! Char - {ch}");
+                break;
         }
     }
 }
