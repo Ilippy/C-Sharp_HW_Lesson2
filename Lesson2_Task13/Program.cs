@@ -35,7 +35,7 @@ internal partial class Program
     }
 
     static void ShowThirdDigit(int number){
-        int increment = number < 0 ? 0 : 1;
+        int increment = number < 0 ? 1 : 0;
         string str = number.ToString();
         System.Console.WriteLine(str.Length < 3 + increment ? $"{str} -> третьей цифры нет" : 
             $"{str} -> {str[2 + increment]}");
