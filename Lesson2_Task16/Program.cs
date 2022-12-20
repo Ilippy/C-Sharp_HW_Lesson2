@@ -14,8 +14,8 @@ internal class Program
     {
         int number1 = EnterNumber("Введите первое число");
         int number2 = EnterNumber("Введите второе число");
-        
-        if(number1 == number2*number2 || number1 * number1 == number2) 
+
+        if (number1 == number2 * number2 || number1 * number1 == number2)
             System.Console.WriteLine($"{number1}, {number2} -> да");
         else System.Console.WriteLine($"{number1}, {number2} -> нет");
 

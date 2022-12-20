@@ -45,27 +45,30 @@ internal partial class Program
     static void ShowThirdDigitSecondSolution(int number)
     {
         int result = number;
-        if(number < 0 ) result *= -1;
+        if (number < 0) result *= -1;
         int numberDigits = (int)Math.Floor(Math.Log10(result) + 1);
-        if (numberDigits >= 3){
-            result = result / (int)Math.Pow(10,numberDigits-3) % 10; // dunno why result /= don't work here
+        if (numberDigits >= 3)
+        {
+            result = result / (int)Math.Pow(10, numberDigits - 3) % 10; // dunno why result /= don't work here
             System.Console.WriteLine($"{number} -> {result}");
-        } else System.Console.WriteLine($"{number} -> третьей цифры нет");
+        }
+        else System.Console.WriteLine($"{number} -> третьей цифры нет");
     }
 
-    static void ShowThirdDigitThirdSolution(int number){
+    static void ShowThirdDigitThirdSolution(int number)
+    {
         int result = number;
-        if(result < 0) result *= -1;
+        if (result < 0) result *= -1;
         if (result >= 100)
+        {
+            while (result > 999)
             {
-                while (result > 999)
-                {
-                    result /= 10;
-                }
-                result %= 10;
-                System.Console.WriteLine($"{number} -> {result}");
+                result /= 10;
             }
-            else System.Console.WriteLine($"{number} -> третьей цифры нет");
+            result %= 10;
+            System.Console.WriteLine($"{number} -> {result}");
+        }
+        else System.Console.WriteLine($"{number} -> третьей цифры нет");
     }
     #endregion
 }

@@ -12,7 +12,7 @@ internal class Program
     {
         int number1 = EnterNumber("Введите первое число");
         int number2 = EnterNumber("Введите второе число");
-    
+
 
 
         if (number1 % number2 == 0) Console.WriteLine($"{number1}, {number2} -> кратно");
@@ -33,16 +33,16 @@ internal class Program
 
 
 
-        static int EnterNumber(string str)
+    static int EnterNumber(string str)
+    {
+        System.Console.WriteLine(str);
+        string stringNumber = Console.ReadLine()!.Trim();
+        int number;
+        while (!int.TryParse(stringNumber, out number))
         {
-            System.Console.WriteLine(str);
-            string stringNumber = Console.ReadLine()!.Trim();
-            int number;
-            while (!int.TryParse(stringNumber, out number))
-            {
-                Console.WriteLine("Ошибка! Введите одно целое число");
-                stringNumber = Console.ReadLine()!.Trim();
-            }
-            return number;
+            Console.WriteLine("Ошибка! Введите одно целое число");
+            stringNumber = Console.ReadLine()!.Trim();
         }
+        return number;
+    }
 }

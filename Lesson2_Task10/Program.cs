@@ -9,7 +9,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int number = new Random().Next(100,1000);
+        int number = new Random().Next(100, 1000);
         System.Console.WriteLine($"Рандомное число {number}");
 
         // int number = EnterNumber("Введите одно трехзначное число");
@@ -32,11 +32,13 @@ internal class Program
         return number;
     }
 
-    static void ShowSecondDigit(int number){
+    static void ShowSecondDigit(int number)
+    {
         System.Console.WriteLine($"Вторая цифра числа {number} = {number / 10 % 10}");
     }
 
-    static void ShowSecondDigit(string str){
+    static void ShowSecondDigit(string str)
+    {
         System.Console.WriteLine($"Вторая цифра строки {str} = {str[1]}");
     }
 }

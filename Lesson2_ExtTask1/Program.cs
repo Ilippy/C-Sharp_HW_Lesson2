@@ -12,11 +12,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        int number = new Random().Next(20,100);
+        int number = new Random().Next(20, 100);
         System.Console.WriteLine($"Рандомное число {number}");
         int d = EnterNumber("Введите целое число");
-        
-        System.Console.WriteLine(number % d == 0 ? $"Число {number} делится на число {d} без остатка" : 
+
+        System.Console.WriteLine(number % d == 0 ? $"Число {number} делится на число {d} без остатка" :
             $"Число {number} делится на число {d} с остатком {number % d}");
 
     }

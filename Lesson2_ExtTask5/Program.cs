@@ -28,10 +28,10 @@ internal partial class Program
     static void BodyShame(int weight, int height)
     {
         int n = height - 100;
-        if (weight >= n - n / 10 && weight <= n + n / 10) 
+        if (weight >= n - n / 10 && weight <= n + n / 10)
             System.Console.WriteLine($"При росте {height}кг и весе {weight} - Норма");
-        else if(weight < n - n/10) System.Console.WriteLine($"При росте {height}кг и весе {weight} - Нужно поправиться");
-        else if(weight > n - n/10) System.Console.WriteLine($"При росте {height}кг и весе {weight} - Нужно похудеть");
+        else if (weight < n - n / 10) System.Console.WriteLine($"При росте {height}кг и весе {weight} - Нужно поправиться");
+        else if (weight > n - n / 10) System.Console.WriteLine($"При росте {height}кг и весе {weight} - Нужно похудеть");
         else System.Console.WriteLine($"Error! Weight = {weight} and height = {height}");
     }
 }
