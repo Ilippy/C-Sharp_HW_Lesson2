@@ -11,11 +11,11 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        // string stringNumber = Console.ReadLine().Trim;
-        // ShowThirdDigit(stringNumber);
         int number = EnterNumber("Введите одно число");
         ShowThirdDigit(number);
-         
+        ShowThirdDigitSecondSolution(number);
+        ShowThirdDigitThirdSolution(number);
+
 
     }
 
@@ -34,12 +34,39 @@ internal partial class Program
         return number;
     }
 
-    static void ShowThirdDigit(int number){
+    static void ShowThirdDigit(int number)
+    {
         int increment = number < 0 ? 1 : 0;
         string str = number.ToString();
-        System.Console.WriteLine(str.Length < 3 + increment ? $"{str} -> третьей цифры нет" : 
+        System.Console.WriteLine(str.Length < 3 + increment ? $"{str} -> третьей цифры нет" :
             $"{str} -> {str[2 + increment]}");
     }
 
+    static void ShowThirdDigitSecondSolution(int number)
+    {
+        int newNumber = number;
+        if(number < 0 ) newNumber *= -1;
+        int numberDigits = (int)Math.Floor(Math.Log10(newNumber) + 1);
+        int thirdDigit;
+        if (numberDigits >= 3){
+            thirdDigit = newNumber / (int)Math.Pow(10,numberDigits-3) % 10;
+            System.Console.WriteLine($"{number} -> {thirdDigit}");
+        } else System.Console.WriteLine($"{number} -> третьей цифры нет");
+    }
+
+    static void ShowThirdDigitThirdSolution(int number){
+        int newNumber = number;
+        if(newNumber < 0) newNumber *= -1;
+        if (newNumber >= 100)
+            {
+                while (newNumber > 999)
+                {
+                    newNumber /= 10;
+                }
+                newNumber %= 10;
+                System.Console.WriteLine($"{number} -> {newNumber}");
+            }
+            else System.Console.WriteLine($"{number} -> третьей цифры нет");
+    }
     #endregion
 }
