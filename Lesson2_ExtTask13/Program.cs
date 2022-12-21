@@ -1,4 +1,8 @@
-﻿internal partial class Program
+﻿// Вычисляется и выводится в таблицу с шагом 10 км стоимость поездки
+// на автомобиле в зависимости от расстояния S (10 – 90 км). С клавиатуры
+// вводятся: b - расход бензина на 100 км, c - цена бензина за 1л литр. (цикл for)
+
+internal partial class Program
 {
     private static void Main(string[] args)
     {
