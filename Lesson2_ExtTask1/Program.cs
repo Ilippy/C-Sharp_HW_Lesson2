@@ -14,7 +14,7 @@ internal class Program
     {
         int number = new Random().Next(20, 100);
         System.Console.WriteLine($"Рандомное число {number}");
-        int d = EnterNumber("Введите целое число");
+        int d = EnterNumber("Введите целое число не равное 0");
 
         System.Console.WriteLine(number % d == 0 ? $"Число {number} делится на число {d} без остатка" :
             $"Число {number} делится на число {d} с остатком {number % d}");
@@ -26,9 +26,9 @@ internal class Program
         System.Console.WriteLine(str);
         string stringNumber = Console.ReadLine()!.Trim();
         int number;
-        while (!int.TryParse(stringNumber, out number))
+        while (!int.TryParse(stringNumber, out number )|| number == 0)
         {
-            Console.WriteLine("Ошибка! Введите одно целое число");
+            Console.WriteLine($"Ошибка! {str}");
             stringNumber = Console.ReadLine()!.Trim();
         }
         return number;

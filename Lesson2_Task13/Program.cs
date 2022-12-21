@@ -11,7 +11,7 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        int number = EnterNumber("Введите одно число");
+        int number = EnterNumber("Введите одно целое число");
         ShowThirdDigit(number);
         ShowThirdDigitSecondSolution(number);
         ShowThirdDigitThirdSolution(number);
@@ -28,7 +28,7 @@ internal partial class Program
         int number;
         while (!int.TryParse(stringNumber, out number))
         {
-            Console.WriteLine("Ошибка! Введите одно целое число");
+            Console.WriteLine($"Ошибка! {str}");
             stringNumber = Console.ReadLine()!.Trim();
         }
         return number;
@@ -44,8 +44,7 @@ internal partial class Program
 
     static void ShowThirdDigitSecondSolution(int number)
     {
-        int result = number;
-        if (number < 0) result *= -1;
+        int result = Math.Abs(number);
         int numberDigits = (int)Math.Floor(Math.Log10(result) + 1);
         if (numberDigits >= 3)
         {
@@ -57,8 +56,7 @@ internal partial class Program
 
     static void ShowThirdDigitThirdSolution(int number)
     {
-        int result = number;
-        if (result < 0) result *= -1;
+        int result = Math.Abs(number);
         if (result >= 100)
         {
             while (result > 999)
