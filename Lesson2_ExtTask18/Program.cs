@@ -15,7 +15,7 @@ internal partial class Program
         int number;
         while (true)
         {
-            number = random.Next(-40, 40);
+            number = random.Next(-40, 41);
             //System.Console.WriteLine($"{number} -> {number%2}");
             if (Math.Abs(number) % 2 == 1)
             {
