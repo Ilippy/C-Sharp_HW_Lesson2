@@ -30,7 +30,7 @@ internal partial class Program
         int i = 1;
         while (res <= bacteria * n)
         {
-            res += bacteria * p / 100; // dunno  bacteria * p / 100    or   res * p / 100
+            res += res * p / 100; 
             System.Console.WriteLine($"День {i}, бактерии {Math.Round(res, 2)}");
             i++;
         }
