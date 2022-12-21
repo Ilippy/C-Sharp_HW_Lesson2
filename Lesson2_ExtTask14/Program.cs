@@ -30,9 +30,10 @@ internal partial class Program
     {
         double g = 9.80665;
         double y;
-        for (double i = 0; i <= 2; i += 0.2 ){
-            y = v0 * i - g *(i*i)/2;
-            System.Console.WriteLine($"y = {Math.Round(y, 2)} в {Math.Round(i,1)}c");
+        for (double i = 0; i <= 2; i += 0.2)
+        {
+            y = v0 * i - g * (i * i) / 2;
+            System.Console.WriteLine($"y = {Math.Round(y, 2)} в {Math.Round(i, 1)}c");
         }
     }
 }

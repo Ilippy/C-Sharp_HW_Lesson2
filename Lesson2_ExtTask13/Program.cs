@@ -29,8 +29,9 @@ internal partial class Program
     static void ShowSumGasCost(int S, float b, float c)
     {
         float result = 0;
-        for(int i = 10; i <= S; i= i + 10){
-            result += b/10 * c;
+        for (int i = 10; i <= S; i = i + 10)
+        {
+            result += b / 10 * c;
             System.Console.WriteLine($"Вы проехали {i} км и вы потратили {result} рублей за бензин");
         }
     }

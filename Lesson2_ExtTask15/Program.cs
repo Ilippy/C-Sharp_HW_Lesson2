@@ -5,10 +5,11 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        do {
-        float r = EnterNumber("Введите радиус круга");
-        ShowCircleArea(r);
-        System.Console.WriteLine("Нажмите Z чтобы завершить программу или любую клавишу, чтобы продолжить");
+        do
+        {
+            float r = EnterNumber("Введите радиус круга");
+            ShowCircleArea(r);
+            System.Console.WriteLine("Нажмите Z чтобы завершить программу или любую клавишу, чтобы продолжить");
         } while (Console.ReadKey(true).Key != ConsoleKey.Z);
     }
 
@@ -26,7 +27,8 @@ internal partial class Program
         return number;
     }
 
-    static void ShowCircleArea(float r){
+    static void ShowCircleArea(float r)
+    {
         System.Console.WriteLine($"Площадь круга с радиусом {r} равна {3.14 * r * r}");
     }
 

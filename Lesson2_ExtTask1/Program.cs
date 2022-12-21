@@ -26,7 +26,7 @@ internal class Program
         System.Console.WriteLine(str);
         string stringNumber = Console.ReadLine()!.Trim();
         int number;
-        while (!int.TryParse(stringNumber, out number )|| number == 0)
+        while (!int.TryParse(stringNumber, out number) || number == 0)
         {
             Console.WriteLine($"Ошибка! {str}");
             stringNumber = Console.ReadLine()!.Trim();

@@ -30,10 +30,13 @@ internal class Program
     {
         int start, end;
         int sum = 0;
-        if(number1 < number2){
+        if (number1 < number2)
+        {
             start = number1;
             end = number2;
-        } else {
+        }
+        else
+        {
             start = number2;
             end = number1;
         }
