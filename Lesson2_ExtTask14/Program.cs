@@ -8,7 +8,7 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        double v0 = EnterNumber("Введите скорость в км/ч");
+        double v0 = EnterNumber("Введите начальную скорость в км/ч");
         ShowCordinates(v0);
     }
 
