@@ -16,6 +16,7 @@ internal partial class Program
         ShowThirdDigitSecondSolution(number);
         ShowThirdDigitThirdSolution(number);
 
+        
 
     }
 
@@ -48,7 +49,7 @@ internal partial class Program
         int numberDigits = (int)Math.Floor(Math.Log10(result) + 1);
         if (numberDigits >= 3)
         {
-            result = result / (int)Math.Pow(10, numberDigits - 3) % 10; // dunno why result /= don't work here
+            result = result / (int)Math.Pow(10, numberDigits - 3) % 10;
             System.Console.WriteLine($"{number} -> {result}");
         }
         else System.Console.WriteLine($"{number} -> третьей цифры нет");

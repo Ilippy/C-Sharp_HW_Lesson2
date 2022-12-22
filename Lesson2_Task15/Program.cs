@@ -29,22 +29,27 @@ internal partial class Program
         return number;
     }
 
-    static void ShowWeekEnd(int i)
+    static void ShowWeekEnd(int number)
     {
-        switch (i)
+
+        switch (number)
         {
             case > 0 and <= 5:
-                Console.WriteLine($"{i} -> нет");
+                Console.WriteLine($"{number} -> нет");
                 break;
 
             case 6:
             case 7:
-                Console.WriteLine($"{i} -> да");
+                Console.WriteLine($"{number} -> да");
                 break;
             default:
-                Console.WriteLine($"{i} -> не день недели");
+                Console.WriteLine($"{number} -> не день недели");
                 break;
         }
+
+        // if (number > 0 && number <= 5) Console.WriteLine($"{number} -> нет");
+        // else if (number == 6 || number == 7) Console.WriteLine($"{number} -> да");
+        // else Console.WriteLine($"{number} -> не день недели");
 
     }
     #endregion
