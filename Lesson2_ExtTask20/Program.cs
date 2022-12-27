@@ -34,6 +34,6 @@ internal partial class Program
             System.Console.WriteLine($"День {i}, бактерии {Math.Round(res, 2)}");
             i++;
         }
-        System.Console.WriteLine($"Нужно {i} дней, чтобы увеличить количество бактерий в {n} раз с шагом {p}%");
+        System.Console.WriteLine($"Нужно {i-1} дней, чтобы увеличить количество бактерий в {n} раз с шагом {p}%");
     }
 }
